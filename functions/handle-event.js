@@ -42,7 +42,7 @@ class hendle {
     }
 
     async handlePostback(req, event) {
-        return await LineApp.replyMessage(event.replyToken, messages.debug(req.body)); //messages.welcome(req.body)
+        return await LineApp.replyMessage(event.replyToken, messages.flex(JSON.stringify(req.body))); //debug(req.body)); //messages.welcome(req.body)
     }
 }
 
